@@ -1,5 +1,3 @@
-/* src/components/EndOfChapterImage.css */
-
 /* EndOfChapterImage.css */
 .end-of-chapter-image {
   text-align: center; /* Center the image */
@@ -13,7 +11,7 @@
   /* Add more styles as needed */
 }
 
-
+/* Overlay */
 .end-of-chapter-image::before {
   content: '';
   position: absolute;
@@ -25,7 +23,8 @@
   z-index: 1;
 }
 
+/* Ensure text appears above the image */
 .end-of-chapter-image img,
 .end-of-chapter-image::before {
-  z-index: 1; /* Ensure text appears above the image */
+  z-index: 1;
 }

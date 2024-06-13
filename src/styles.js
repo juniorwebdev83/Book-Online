@@ -1,43 +1,79 @@
+// styles.js
+
 import styled from 'styled-components';
 
-export const AppContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+export const BookWrapper = styled.div`
+    perspective: 2000px;
+    width: 100vw;
     height: 100vh;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const BookContainer = styled.div`
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: #fff;
-
-    @media (max-width: 768px) {
-        padding: 10px;
+    width: 90%;
+    height: 90%;
+    max-width: 1200px;
+    max-height: 800px;
+    position: relative;
+    transform-style: preserve-3d;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    
+    @media (max-width: 1200px) {
+        width: 95%;
+        height: 95%;
     }
 
-    @media (max-width: 480px) {
-        padding: 5px;
+    @media (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
     }
 `;
 
-export const PageContainer = styled.article`
+export const PageContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
-    background: #f9f9f9;
-    border-radius: 8px;
+    overflow: hidden;
+`;
 
-    @media (max-width: 768px) {
-        padding: 15px;
-    }
+export const EndOfChapterImageWrapper = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
-    @media (max-width: 480px) {
-        padding: 10px;
-    }
+export const EndOfChapterImageOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+`;
+
+export const EndOfChapterImageElement = styled.img`
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    z-index: 3;
 `;
