@@ -1,40 +1,24 @@
-import React, { useState } from 'react';
-import Book from './Book';
-import { AppContainer } from './styles';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Book from './components/Book'; // Correct import path
+import Chapter1 from './components/Chapter1';
+import Chapter2 from './components/Chapter2';
+import Chapter3 from './components/Chapter3';
+import Chapter4 from './components/Chapter4';
 
 const App = () => {
-    const [password, setPassword] = useState('');
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-    const handlePasswordChange = (e) => {
-        setPassword(e.target.value);
-    }
-
-    const handleLogin = () => {
-        const correctPassword = 'Joaquim2022#';
-        if (password === correctPassword) {
-            setIsAuthenticated(true);
-        } else {
-            alert('Incorrect password');
-        }
-    }
-
-    if (isAuthenticated) {
-        return <Book />;
-    }
-
-    return (
-        <AppContainer>
-            <h1>Enter Password to Access the Book</h1>
-            <input
-                type="password"
-                value={password}
-                onChange={handlePasswordChange}
-                style={{ marginBottom: '10px', padding: '8px', borderRadius: '4px' }}
-            />
-            <button onClick={handleLogin} style={{ padding: '10px 20px', borderRadius: '4px' }}>Enter</button>
-        </AppContainer>
-    );
-}
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Book />} />
+        <Route path="/chapter1" element={<Chapter1 />} />
+        <Route path="/chapter2" element={<Chapter2 />} />
+        <Route path="/chapter3" element={<Chapter3 />} />
+        <Route path="/chapter4" element={<Chapter4 />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
