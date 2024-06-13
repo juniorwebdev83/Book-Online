@@ -1,15 +1,13 @@
-// src/components/EndOfChapterImage.js
 import React from 'react';
-import './EndOfChapterImage.css';
+import { EndOfChapterImageWrapper, EndOfChapterImageOverlay, EndOfChapterImageElement } from '../styles'; // Import styles
 
-const EndOfChapterImage = () => {
-  const imageUrl = `${process.env.PUBLIC_URL}/images/tree.jpg`;
-
-  return (
-    <div>
-      <img src={imageUrl} alt="End of Chapter" className="end-of-chapter-image" />
-    </div>
-  );
+const EndOfChapterImage = ({ imageUrl }) => {
+    return (
+        <EndOfChapterImageWrapper>
+            <EndOfChapterImageOverlay />
+            <EndOfChapterImageElement src={imageUrl} alt="End of chapter image" />
+        </EndOfChapterImageWrapper>
+    );
 };
 
 export default EndOfChapterImage;
