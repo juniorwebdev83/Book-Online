@@ -3,8 +3,8 @@ import React from 'react';
 const Chapter1 = () => {
     return (
         <div>
-            <h1>Chapter 1</h1>
-            <p>Your content for Chapter 1 goes here...</p>
+            <h2>Chapter 1</h2>
+            <p>Content for Chapter 1 goes here...</p>
         </div>
     );
 }
