@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 
 const Chapter12 = () => (
     <div>
@@ -8,4 +8,3 @@ const Chapter12 = () => (
 );
 
 export default Chapter12;
-

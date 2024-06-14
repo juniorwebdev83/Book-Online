@@ -1,15 +1,15 @@
-// src/components/Chapter4.js
+// src/components/Chapter3.jsx
 import React from 'react';
 import EndOfChapterImage from './EndOfChapterImage';
 
-const Chapter4 = () => {
+const Chapter3 = () => {
   return (
     <div>
-      <h1>Chapter 4</h1>
-      <p>Content for Chapter 4...</p>
+      <h1>Chapter 3</h1>
+      <p>Content for Chapter 3...</p>
       <EndOfChapterImage />
     </div>
   );
 };
 
-export default Chapter4;
+export default Chapter3;

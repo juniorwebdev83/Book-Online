@@ -1,4 +1,4 @@
-// src/components/Chapter2.js
+// src/components/Chapter2.jsx
 import React from 'react';
 import EndOfChapterImage from './EndOfChapterImage';
 
